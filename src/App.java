@@ -2,7 +2,6 @@
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
-import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Properties;
 
@@ -45,8 +44,7 @@ public class App {
             
             statement.executeUpdate(sql);
             statement.close();
-        } catch (SQLException e) {
-            // TODO Auto-generated catch block
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
